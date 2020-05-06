@@ -1,7 +1,12 @@
 /* nejsme vcerejsi, pouzivame moderni box model */
-html { box-sizing: border-box; }
-*, :after, :before { box-sizing: inherit; }
-
+html {
+  box-sizing: border-box;
+}
+*,
+:after,
+:before {
+  box-sizing: inherit;
+}
 
 /* -------------------------------------------------- */
 
@@ -17,24 +22,127 @@ notebook/pc:
 }
 */
 
-
 body {
-    margin: 0;
-    font-family: 'Source Sans Pro', sans-serif;
+  margin: 0;
+  font-family: "Source Sans Pro", sans-serif;
 }
 
 .paticka {
-    text-align: center;
-    font-size: 14px;
-    color: silver;
+  text-align: center;
+  font-size: 14px;
+  color: silver;
 }
 
 .paticka a {
-    color: silver;
+  color: silver;
 }
-
 
 /* ------------------------------- */
 /* ----- DOLE BUDE TVOJE CSS ----- */
 /* ------------------------------- */
 
+.hlavni-recept,
+.recept {
+  background-position: center;
+  background-size: cover;
+  border: 0.1px solid white;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 10px;
+  text-shadow: 2px 4px 3px rgba(0, 0, 0, 0.3);
+}
+.hlavni-recept {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+    url(images/burger.jpg);
+  min-height: 200px;
+}
+.recept2 {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+    url(images/bun.jpg);
+}
+.recept3 {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+    url(images/kure.jpg);
+}
+.recept4 {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+    url(images/rajcata.jpg);
+}
+.recept5 {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+    url(images/grilovani.jpg);
+}
+.recept {
+  min-height: 90px;
+}
+.recept-kategorie,
+.recept-komentare {
+  font-size: 14px;
+  font-weight: 400;
+}
+.hlavni-recept h2 {
+  font-size: 28px;
+}
+.recept-nazev {
+  font-family: "Raleway", sans-serif;
+  font-size: 18px;
+  margin: 0;
+}
+.recept-meta {
+  display: flex;
+  justify-content: space-between;
+}
+
+@media (min-width: 480px) {
+  .hlavni-recept h2 {
+    font-size: 36px;
+  }
+  .recept-nazev {
+    font-size: 22px;
+  }
+  .hlavni-recept {
+    min-height: 250px;
+  }
+  .recept2,
+  .recept3,
+  .recept4,
+  .recept5 {
+    float: left;
+    min-height: 150px;
+    width: 50%;
+  }
+  .recept {
+    min-height: 150px;
+    width: 50%;
+  }
+  .hlavni-recept,
+  .recept {
+    padding: 20px;
+  }
+}
+
+@media (min-width: 860px) {
+  .hlavni-recept h2 {
+    font-size: 48px;
+  }
+  .recept-nazev {
+    font-size: 28px;
+  }
+  .hlavni-recept {
+    flex-basis: 50%;
+    min-height: 400px;
+  }
+  .recept {
+    min-height: 200px;
+    width: 50%;
+  }
+  .hlavni-recept,
+  .recept {
+    padding: 20px;
+  }
+  .doporucujeme {
+    display: flex;
+  }
+}
